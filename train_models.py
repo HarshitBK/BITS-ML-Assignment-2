@@ -2,14 +2,16 @@
 Assignment 2 - M.Tech AIML (BITS Pilani)
 Dataset: Breast Cancer Wisconsin (Diagnostic) Dataset
 
-This script trains 5 classification models:
+5 classification models:
 1. Logistic Regression
 2. Decision Tree Classifier
-3. K-Nearest Neighbors Classifier
+3. K-Nearest Neighbors Classifier (k=5)
 4. Naive Bayes Classifier (GaussianNB)
 5. Support Vector Machine (SVC with probability=True)
 
-It evaluates all models across 6 required metrics:
+Used Random state =42 for all models and train_test_split to have the standard set of data for all runs.
+
+Metric to evaluate model:
 - Accuracy
 - AUC Score
 - Precision
@@ -80,8 +82,8 @@ def main():
     )
     print(f"Train samples: {len(X_train)}, Test samples: {len(X_test)}")
 
-    # 3. Save test_data.csv for assignment submission and testing
-    # Keep the original diagnosis representation ('M' and 'B') so test file is realistic
+    # 3. Save test_data.csv for submission and testing
+    # Keeping the original diagnosis representation ('M' and 'B') so test file is realistic
     test_df = X_test.copy()
     test_df['diagnosis'] = y_test.map({1: 'M', 0: 'B'})
     test_df.to_csv("test_data.csv", index=False)
@@ -123,9 +125,9 @@ def main():
 
     results = []
 
-    print("\n" + "="*80)
+    print()
     print("MODEL TRAINING & EVALUATION ON TEST SET")
-    print("="*80)
+    print()
 
     trained_models = {}
 
@@ -187,10 +189,6 @@ def main():
         joblib.dump(trained_models[name], filename)
         print(f"Saved {name} -> {filename}")
 
-    # Copy train_models.py to model/ folder as required by repo structure specification
-    # ("model/ ... Include the source code (.py or .ipynb)")
-    import shutil
-    shutil.copy("train_models.py", "model/train_models.py")
 
     print("\nAll model artifacts saved successfully in 'model/' directory!")
 

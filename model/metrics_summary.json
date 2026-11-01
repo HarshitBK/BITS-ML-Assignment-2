@@ -1,0 +1,47 @@
+[
+  {
+    "ML Model Name": "Logistic Regression",
+    "Accuracy": 0.9649,
+    "AUC": 0.996,
+    "Precision": 0.975,
+    "Recall": 0.9286,
+    "F1": 0.9512,
+    "MCC": 0.9245
+  },
+  {
+    "ML Model Name": "Decision Tree",
+    "Accuracy": 0.9211,
+    "AUC": 0.9676,
+    "Precision": 0.9459,
+    "Recall": 0.8333,
+    "F1": 0.8861,
+    "MCC": 0.8299
+  },
+  {
+    "ML Model Name": "KNN",
+    "Accuracy": 0.9561,
+    "AUC": 0.9825,
+    "Precision": 0.9744,
+    "Recall": 0.9048,
+    "F1": 0.9383,
+    "MCC": 0.9058
+  },
+  {
+    "ML Model Name": "Naive Bayes",
+    "Accuracy": 0.9211,
+    "AUC": 0.9891,
+    "Precision": 0.9231,
+    "Recall": 0.8571,
+    "F1": 0.8889,
+    "MCC": 0.8292
+  },
+  {
+    "ML Model Name": "Support Vector Machine",
+    "Accuracy": 0.9737,
+    "AUC": 0.9947,
+    "Precision": 1.0,
+    "Recall": 0.9286,
+    "F1": 0.963,
+    "MCC": 0.9442
+  }
+]
