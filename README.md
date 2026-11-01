@@ -1,8 +1,7 @@
 # Machine Learning Assignment 2: Breast Cancer Classification
 
 **Course:** M.Tech (AIML) - Machine Learning  
-**Institution:** BITS Pilani (Work Integrated Learning Programmes Division)  
-**Submission Deadline:** 08-Nov-2026  
+**Institution:** BITS Pilani (Work Integrated Learning Programmes Division)   
 
 ---
 
@@ -14,16 +13,15 @@ The goal of this assignment is to:
 1. Develop an end-to-end Machine Learning classification pipeline evaluating **5 distinct supervised learning algorithms** on the Wisconsin Breast Cancer Diagnostic dataset.
 2. Evaluate each model using **6 standardized performance metrics**: Accuracy, Area Under the ROC Curve (AUC), Precision, Recall, F1 Score, and Matthews Correlation Coefficient (MCC).
 3. Build and deploy an interactive **Streamlit web application** enabling dynamic model selection, custom test dataset upload, live metric calculations, confusion matrix visualization, ROC curves, and single-sample clinical simulations.
-4. Host the application on **Streamlit Community Cloud** with open public access.
 
 ---
 
 ## b. Dataset Description
 
 - **Dataset Name:** Breast Cancer Wisconsin (Diagnostic) Dataset
-- **Source:** UCI Machine Learning Repository / Kaggle (`usman44m/breast-cancer-tabular-dataset` & `data.csv`)
-- **Number of Instances:** **569** (Meets assignment requirement: Minimum 500 instances)
-- **Number of Features:** **30 continuous numeric predictive attributes** (Meets assignment requirement: Minimum 12 features)
+- **Source:**  Kaggle (`usman44m/breast-cancer-tabular-dataset`). Also added in the repository as `data.csv`. 
+- **Number of Instances:** **569** 
+- **Number of Features:** **30 continuous numeric predictive attributes** 
 - **Target Attribute:** `diagnosis` (Binary classification: `M` = Malignant, `B` = Benign)
 - **Class Distribution:**
   - Benign (`B` / `0`): 357 instances (62.7%)
