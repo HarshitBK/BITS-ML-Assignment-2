@@ -12,6 +12,7 @@ Features:
 - Interactive Single-Sample Diagnosis Simulator
 """
 
+# imports
 import os
 import json
 import joblib
@@ -40,7 +41,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom styling for academic & professional presentation
+# Custom styling
 st.markdown("""
 <style>
     .main-title {
@@ -129,7 +130,7 @@ except Exception as e:
     st.stop()
 
 
-# ---------------- SIDEBAR ----------------
+# Sidebar
 st.sidebar.image("https://img.icons8.com/fluency/96/artificial-intelligence.png", width=64)
 st.sidebar.title("BITS Pilani - M.Tech AIML")
 st.sidebar.markdown("**Machine Learning - Assignment 2**")
@@ -193,7 +194,7 @@ st.sidebar.markdown("""
 """)
 
 
-# ---------------- PREPROCESS TEST DATA ----------------
+# Preprocess test data
 def prepare_test_data(df, feature_names):
     # Check target column
     target_col = None
@@ -234,7 +235,7 @@ except Exception as e:
     st.stop()
 
 
-# ---------------- EVALUATION HELPER ----------------
+# Evaluation helper 
 def evaluate_model(model_name, clf, X, y, scaler, scale_flags):
     use_scaled = scale_flags.get(model_name, True)
     X_proc = scaler.transform(X) if use_scaled else X.values
@@ -285,7 +286,7 @@ for m_name, m_obj in MODELS.items():
     all_eval_results[m_name] = evaluate_model(m_name, m_obj, X_test, y_test, SCALER, SCALE_FLAGS)
 
 
-# ---------------- MAIN UI HEADER ----------------
+# UI Header
 st.markdown('<div class="main-title">🔬 Breast Cancer Classification System</div>', unsafe_allow_html=True)
 st.markdown(
     '<div class="sub-title">Evaluation of 5 Machine Learning Classifiers on Breast Cancer Wisconsin (Diagnostic) Dataset '
@@ -296,7 +297,7 @@ st.markdown(
 tabs = st.tabs(["📊 Model Evaluation & Metrics", "🔍 Live Sample Diagnosis", "📖 Dataset & Assignment Details"])
 
 
-# ---------------- TAB 1: EVALUATION & METRICS ----------------
+# TAB 1: Evaluation and metrics
 with tabs[0]:
     if selected_option == "All Models (Comparative View)":
         st.subheader("📋 Models Performance Comparison Table")
@@ -511,7 +512,7 @@ with tabs[0]:
         st.dataframe(cr_df, use_container_width=True, hide_index=True)
 
 
-# ---------------- TAB 2: LIVE SAMPLE DIAGNOSIS ----------------
+# ---------------- TAB 2: Live sample diagnosis ----------------
 with tabs[1]:
     st.subheader("🔍 Interactive Single Patient Prediction Simulator")
     st.markdown("Select any patient sample from the uploaded test dataset or inspect custom biological cell feature values.")
@@ -578,7 +579,7 @@ with tabs[1]:
         st.dataframe(sample_subset, use_container_width=True)
 
 
-# ---------------- TAB 3: DATASET & ASSIGNMENT DETAILS ----------------
+#  TAB 3: Dataset and assignment details
 with tabs[2]:
     st.subheader("📖 Dataset Description & Academic Specifications")
 
