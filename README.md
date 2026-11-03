@@ -1,7 +1,7 @@
-# Machine Learning Assignment 2: Breast Cancer Classification
+# Machine Learning Assignment 2: Breast Cancer Classification (Malignant v/s Benign)
 
 **Course:** M.Tech (AIML) - Machine Learning  
-**Institution:** BITS Pilani (Work Integrated Learning Programmes Division)   
+**Institution:** BITS Pilani (WILP)   
 
 ---
 
@@ -12,7 +12,7 @@ Breast cancer is one of the most diagnosed life-threatening cancers globally. Ea
 The goal of this assignment is to:
 1. Develop an end-to-end Machine Learning classification pipeline evaluating **5 distinct supervised learning algorithms** on the Wisconsin Breast Cancer Diagnostic dataset.
 2. Evaluate each model using **6 standardized performance metrics**: Accuracy, Area Under the ROC Curve (AUC), Precision, Recall, F1 Score, and Matthews Correlation Coefficient (MCC).
-3. Build and deploy an interactive **Streamlit web application** enabling dynamic model selection, custom test dataset upload, live metric calculations, confusion matrix visualization, ROC curves, and single-sample clinical simulations.
+3. Build and deploy an interactive **Streamlit web application** `https://2026aj05631-bits-ml-assignment-2.streamlit.app/` enabling dynamic model selection, custom test dataset upload, live metric calculations, confusion matrix visualization, ROC curves, and single-sample clinical simulations.
 
 ---
 
