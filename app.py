@@ -512,7 +512,7 @@ with tabs[0]:
         st.dataframe(cr_df, use_container_width=True, hide_index=True)
 
 
-# ---------------- TAB 2: Live sample diagnosis ----------------
+# TAB 2: Live sample diagnosis
 with tabs[1]:
     st.subheader("🔍 Interactive Single Patient Prediction Simulator")
     st.markdown("Select any patient sample from the uploaded test dataset or inspect custom biological cell feature values.")

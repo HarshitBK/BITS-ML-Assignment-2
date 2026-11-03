@@ -22,6 +22,8 @@ Metric to evaluate model:
 Saves trained models, scaler, metrics, and held-out test_data.csv.
 """
 
+#imports
+
 import os
 import json
 import joblib
@@ -46,6 +48,7 @@ from sklearn.metrics import (
 )
 
 
+# Function to load and preprocess the data
 def load_and_preprocess_data(filepath="data.csv"):
     df = pd.read_csv(filepath)
     print(f"Loaded raw dataset shape: {df.shape}")
@@ -95,8 +98,6 @@ def main():
     X_test_scaled = scaler.transform(X_test)
 
     # 5. Define Models
-    # Note: SVM and Logistic Regression and KNN benefit from scaling.
-    # GaussianNB and DecisionTree can use scaled or unscaled features; scaled features maintain consistency.
     models = {
         "Logistic Regression": {
             "model": LogisticRegression(max_iter=1000, random_state=42),
